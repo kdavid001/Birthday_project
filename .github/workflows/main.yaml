@@ -18,6 +18,14 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Recreate Google credentials files
+      run: |
+          echo "$CREDENTIAL_SECRETS_JSON" > credentials.json
+          echo "$GOOGLE_TOKEN_JSON" > token.json
+      env:
+          CREDENTIAL_SECRETS_JSON: ${{ secrets.CREDENTIAL_SECRETS_JSON }}
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+    
     - name: Install dependencies
       run: |
         pip install --no-cache-dir -r requirements.txt

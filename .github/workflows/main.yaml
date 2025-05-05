@@ -2,7 +2,7 @@ name: Run Birthday Script
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # ⏰ Every day at 8 AM UTC (adjust as needed)
+    - cron: '30 23 * * *'  # ⏰ Every day at 8 AM UTC (adjust as needed)
   workflow_dispatch:      # Allows manual triggering from GitHub
 
 jobs:

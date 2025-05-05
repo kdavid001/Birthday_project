@@ -46,7 +46,7 @@ def send_letter(name, email):
     """Generate and send a birthday letter with an optional image attachment."""
     print(f"Preparing birthday email for {name}")
     number = random.randint(1, 3)
-    letter_path = f"Letter_Templates/letter_{number}.txt"
+    letter_path = f"Letter_Templates/Letter_{number}.txt"
 
     # Read and personalize the letter
     with open(letter_path, "r") as file:

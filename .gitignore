@@ -1,4 +1,13 @@
-*DS_Store
+# macOS system files
+.DS_Store
+
+# Python cache and compiled files
 __pycache__/
 *.pyc
+
+# Environment and credentials
 .env
+*.json
+
+# Local CSV data files
+Computer_Engineering_Datasheet.csv

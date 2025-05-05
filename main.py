@@ -40,7 +40,7 @@ def authenticate_gmail():
 def send_letter(name, email):
     """Generate and send a birthday letter with an optional image attachment."""
     number = random.randint(1, 3)
-    letter_path = f"letter_templates/letter_{number}.txt"
+    letter_path = f"Letter_Templates/letter_{number}.txt"
 
     # Read and personalize the letter
     with open(letter_path, "r") as file:

@@ -3,7 +3,7 @@ import pandas as pd
 import random
 import smtplib
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from email.message import EmailMessage
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -12,7 +12,7 @@ import base64
 
 print("Starting birthday email script...")
 
-load_dotenv()
+# load_dotenv()
 
 # Load email credentials from environment variables
 MY_EMAIL = os.getenv('MY_EMAIL')

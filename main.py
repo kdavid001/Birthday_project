@@ -9,6 +9,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 import base64
+import requests
+
 
 print("Starting birthday email script...")
 
@@ -45,7 +47,7 @@ def authenticate_gmail():
 def send_letter(name, email):
     """Generate and send a birthday letter with an optional image attachment."""
     print(f"Preparing birthday email for {name}")
-    number = random.randint(1, 3)
+    number = random.randint(1, 10)
     letter_path = f"Letter_Templates/Letter_{number}.txt"
 
     # Read and personalize the letter
@@ -96,11 +98,7 @@ month = now.month
 present = f"{day}.{month}"
 print(f"Today's date: {present}")
 
-# Load birthday data
-import requests
-
 # Share the file and get a "raw" link
-import requests
 
 print("Downloading CSV data from Google Drive...")
 # Download CSV from Google Drive first

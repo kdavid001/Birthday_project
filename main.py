@@ -102,7 +102,7 @@ print(f"Today's date: {present}")
 
 print("Downloading CSV data from Google Drive...")
 # Download CSV from Google Drive first
-file_id = os.getenv('file_id')
+file_id = os.getenv('FILE_ID')
 url = f"https://drive.google.com/uc?export=download&id={file_id}"
 response = requests.get(url)
 

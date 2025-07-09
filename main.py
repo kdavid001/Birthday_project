@@ -102,8 +102,10 @@ print(f"Today's date: {present}")
 
 print("Downloading CSV data from Google Drive...")
 # Download CSV from Google Drive first
-url = "https://drive.google.com/uc?export=download&id=1-gyJsKY3JjmhzsEp4CpGT2NSnl2PXXNs"
+file_id = os.getenv('file_id')
+url = f"https://drive.google.com/uc?export=download&id={file_id}"
 response = requests.get(url)
+
 with open("Computer_Engineering_Datasheet.csv", "wb") as f:
     f.write(response.content)
 print("CSV downloaded successfully.")

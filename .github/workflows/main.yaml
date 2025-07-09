@@ -35,5 +35,6 @@ jobs:
       env:
         MY_EMAIL: ${{ secrets.MY_EMAIL }}
         MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+        FILE_ID: ${{ secrets.FILE_ID}}
       run: |
         python main.py
